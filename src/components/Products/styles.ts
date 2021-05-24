@@ -2,15 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     max-width: 1120px;
-    margin: 2rem auto;
-`;
-
-export const Content = styled.div`
-    margin: 3rem auto;
-    margin-left: 5rem;
-
+    margin: 8rem auto;
+    
 
     h3 {
+        padding-left: 5rem;
         font-size: 2.2rem;
         line-height: 42px;
         font-weight: 300;
@@ -20,21 +16,39 @@ export const Content = styled.div`
 
     section {
         margin-top: 2rem;
+        padding-left: 7rem;
         display: flex;
-        align-items: center;
         gap: 1rem;
-     
+
+        div {
+            margin-top: 5rem;
+            box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+            border-radius: 20px;
+
+            img {
+                width: 300px;
+                height: 363px;
+                
+            }
+        }
         
         footer {
-            text-align: center;
+            text-align: left;
             border-top: 2px solid var(--blue);
-            background: var(--silver);
+            background: var(--silver-200);
             padding: 0.5rem ;
         
             p {
+                align-items: flex-flex-start;
                 margin-top: 1rem;
                 font-size: 0.8rem;
                 font-weight: 300;
+                color: var(--dark-blue);
+            }
+            h6 {
+              
+                font-size: 1.1rem;
+                margin-top: 0.5rem;
                 color: var(--dark-blue);
             }
 
@@ -44,6 +58,7 @@ export const Content = styled.div`
 
                 border: none;
                 border-radius: 5px;
+                outline: none;
 
                 background: var(--blue);
                 color: var(--white);
@@ -58,3 +73,8 @@ export const Content = styled.div`
 
     }
 `;
+
+
+
+
+  

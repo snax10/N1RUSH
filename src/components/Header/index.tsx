@@ -6,8 +6,15 @@ import bag from '../../assets/shopping-bag-solid.svg'
 
 import { Container, Content } from './styles'
 import { Banner } from '../Banner'
+import { useState } from 'react'
 
 export function Header() {
+    const[count, setCount] = useState(0)
+
+    function countOn() {
+        setCount (count + 1);
+    }
+
     return(
         <Container>
             <Content>
@@ -19,20 +26,21 @@ export function Header() {
                 <ul>
                     <li>
                         <img src={contato}/>
-                        <span>Contato</span>
+                        <span>CONTATO</span>
                     </li>
                     <li>
                         <img src={search} />
-                        <span>Buscar</span>
+                        <span>BUSCAR</span>
                     </li>
                     <li>
                         <img src={bag} />
-                        <span>2</span>
+                        <span>{count}</span>
                     </li>
                 </ul>
             </Content>
 
             <Banner />
+
         </Container>
     )
 }

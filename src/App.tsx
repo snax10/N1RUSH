@@ -13,6 +13,7 @@ export function App() {
       <Products />
       <GlobalStyle />
       <Footer />
+      
     </>
   );
 }
