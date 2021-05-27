@@ -10,6 +10,7 @@ interface NewBuyModaProps {
 }
 
 export function NewBuyModal({ isOpen, onRequestClose }: NewBuyModaProps ) {
+  
     return(
         <Modal 
         isOpen={isOpen} 

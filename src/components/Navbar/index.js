@@ -4,26 +4,30 @@ import contato from '../../assets/paper-plane.svg'
 import search from '../../assets/search-solid.svg'
 import bag from '../../assets/shopping-bag-solid.svg'
 
-import { Container, Content } from './styles'
-import { Banner } from '../Banner'
+import { Nav, Content, NavLinks } from './styles'
 import { useState } from 'react'
 
-export function Header() {
-    const[count, setCount] = useState(0)
+export function Navbar({toggle}) {
+    // const[count, setCount] = useState(0)
 
-    function countOn() {
-        setCount (count + 1);
-    }
+    // function countOn() {
+    //     setCount (count + 1);
+    // }
+
+
 
     return(
-        <Container>
-            <Content>
-                <div>
-                    <img src={hamburguer} alt="hamburguer" />
-                    <a href="/"><img src={logoImg} alt="Logo"/></a>
-                </div>
 
-                <ul>
+        <Nav>
+            <Content>
+                    <img 
+                    src={hamburguer} 
+                    alt="hamburguer"  
+                    onClick={toggle}
+                    />
+                    <span><img src={logoImg}  /></span>
+
+                <NavLinks>
                     <li>
                         <img src={contato}/>
                         <span>CONTATO</span>
@@ -34,13 +38,10 @@ export function Header() {
                     </li>
                     <li>
                         <img src={bag} />
-                        <span>{count}</span>
+                        <span>2</span>
                     </li>
-                </ul>
+                </NavLinks>
             </Content>
-
-            <Banner />
-
-        </Container>
+        </Nav>
     )
 }

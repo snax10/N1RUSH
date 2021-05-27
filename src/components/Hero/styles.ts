@@ -1,19 +1,31 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    max-width: 1020px;
+    max-width: 1120px;
     margin: 0 auto;
-    display: grid;
-    gap: 6rem;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
     
     margin-top: -6rem;
+
+    @media (max-width: 720px){
+        margin-top: 2rem;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
 
     div {
       position: relative;
       margin-left: -2.7rem;
-     
-        img{
+   
+
+        img {
           width: 33rem;
           height: 22rem;
         }

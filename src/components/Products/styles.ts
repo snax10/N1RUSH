@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.main`
     max-width: 1120px;
     margin: 8rem auto;
-    
 
     h3 {
         padding-left: 5rem;
@@ -20,6 +19,15 @@ export const Container = styled.div`
         display: flex;
         gap: 1rem;
 
+
+        @media (max-width: 720px){
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
         div {
             margin-top: 5rem;
             box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
@@ -28,7 +36,6 @@ export const Container = styled.div`
             img {
                 width: 300px;
                 height: 363px;
-                
             }
         }
         

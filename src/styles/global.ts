@@ -15,8 +15,8 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    html {
-        @media (max-width: 1080px) {
+    /* html {
+        @media (max-width: 1024px) {
             font-size: 93.75%; //16 x 0,9375 = 15px
         }
     }
@@ -25,25 +25,23 @@ export const GlobalStyle = createGlobalStyle`
         @media (max-width: 720px) {
             font-size: 87.5%; //16 x 0,875  = 14px  
         }
-    }
+    } */
 
-    body {
-        background-image: var(--background);
+    body, html {
+        width: 100%;
+        
+        overflow-x: hidden;
         -webkit-fonnt-smoothing: antialiased; //Fonts mais detalhadas/nítidas
     }
 
     body, input, textarea, button {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif;   
     }
 
     button {
         cursor: pointer;
     }
 
-    [disabled] {
-        opacity: 0.6;
-        cursor: not-allowed; //Não permitido
-    }
     //====== Modal styles =======
     .react-modal-overlay {
         background: rgba(8, 65, 84, 0.62);
@@ -66,6 +64,10 @@ export const GlobalStyle = createGlobalStyle`
         padding: 3rem;
         position: relative;
         border-radius: 5px;
+
+        @media screen and (max-width: 1100) {
+            
+        }
     }
 
     .react-modal-close {
@@ -75,6 +77,11 @@ export const GlobalStyle = createGlobalStyle`
         border: 0;
         background: transparent;
 
-    }
+        transition: 0.2s;
 
+        &:hover {
+            filter: brightness(0.8)
+        }
+    }
+    
 `;
