@@ -11,7 +11,7 @@ export const Container = styled.aside`
     top: 90px;
     left: 200px;
     transition: 0.3s ease-in-out;
-    right: ${({ isOpen }) => (isOpen ? '0' : '0')};
+    
     display: none;
     
 

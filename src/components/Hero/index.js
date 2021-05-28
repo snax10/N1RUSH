@@ -2,7 +2,6 @@ import { Container } from "./styles";
 import zelda from '../../assets/zelda_banner.jpg'
 import sekiro from '../../assets/sekiro_banner.jpg'
 
-
 export function Hero() {
     return(
         <Container>

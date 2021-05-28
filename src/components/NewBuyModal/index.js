@@ -4,13 +4,7 @@ import closeImg from '../../assets/close_btn.svg'
 
 import { Container } from './styles'
 
-interface NewBuyModaProps {
-    isOpen: boolean;
-    onRequestClose: () => void;
-}
-
-export function NewBuyModal({ isOpen, onRequestClose }: NewBuyModaProps ) {
-  
+export function NewBuyModal({ isOpen, onRequestClose } ) {
     return(
         <Modal 
         isOpen={isOpen} 

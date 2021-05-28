@@ -1,19 +1,9 @@
-import { useState } from 'react'
-import { Navbar } from '../Navbar'
-import { Sidebar } from '../SideBar'
 import { Container, Content, BannerItems, BannerH1, BannerH2, BannerP } from './styles'
 
 export function Banner() {
-    const [isOpen, setIsOpen] = useState(false)
-
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
 
     return(
-       <Container>     
-            <Navbar toggle={toggle}/>
-           <Sidebar isOpen={isOpen} toggle={toggle} />       
+       <Container>       
            <Content>
                 <BannerItems>
                     <BannerH1>Mortal Kombat</BannerH1>

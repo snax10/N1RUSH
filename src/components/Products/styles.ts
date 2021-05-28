@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
-    max-width: 1120px;
-    margin: 8rem auto;
+    margin: 7rem auto;
 
     h3 {
         padding-left: 5rem;
@@ -11,17 +10,21 @@ export const Container = styled.main`
         font-weight: 300;
         font-style: normal;
         color: var(--dark-blue);
+
+        @media (max-width: 375px){
+            font-size: 1.4rem;
+            padding-left: 3rem;
+        }
     }
 
     section {
-        margin-top: 2rem;
-        padding-left: 7rem;
         display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 1rem;
 
 
-        @media (max-width: 720px){
-       
+        @media (max-width: 375px){
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,10 +37,16 @@ export const Container = styled.main`
             border-radius: 20px;
 
             img {
-                width: 300px;
-                height: 363px;
+                width: 21rem;
+                height: 22rem;
+
+                @media (max-width: 375px){
+                width: 14rem;
+                height: 15.2rem;
             }
+        
         }
+    }
         
         footer {
             text-align: left;
@@ -46,14 +55,14 @@ export const Container = styled.main`
             padding: 0.5rem ;
         
             p {
-                align-items: flex-flex-start;
+                align-items: flex-start;
                 margin-top: 1rem;
                 font-size: 0.8rem;
                 font-weight: 300;
                 color: var(--dark-blue);
             }
+
             h6 {
-              
                 font-size: 1.1rem;
                 margin-top: 0.5rem;
                 color: var(--dark-blue);

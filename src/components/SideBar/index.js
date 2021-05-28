@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 import { Container, SidebarMenu } from './styles';
 
-export function Sidebar({ isOpen, toggle }  ) {
+export function Sidebar() {
   return(
-      <Container isOpen={isOpen} onClick={toggle} >
+      <Container>
           <SidebarMenu >
             <p>Luta</p>
             <p>Ação</p>

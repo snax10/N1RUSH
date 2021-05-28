@@ -3,24 +3,31 @@ import banner from '../../assets/principal_banner_desktop.jpg'
 import styled from 'styled-components'
 
 export const Container = styled.div` 
+        background: url(${banner}) no-repeat center top;
         width: 100vw;
         height: 90vh;
-
-        background: url(${banner}) no-repeat center top;
         background-position: center;
         background-size: cover;
 
+        @media screen and (max-width: 375px) {
+            background: url(${banner});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+            width: 100%;
+            height: 80vh;
+            
+        }
     `;
 
     export const Content = styled.div` 
-        height: calc(100vh -80px);
-        max-height: 100%;
-        width: 100vw;
+            width: 1100px;
         
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 375px) {
             position: relative;
             text-align: center;
             width: 100%;
+            height: 50vh;
         }
     
     `;
@@ -29,17 +36,15 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-end;
-        height: 100vh;
+        height: 80vh;
         
         padding: 0 2rem;
-        width: 1150px;
         line-height: 1;
 
-        @media screen and (max-width: 1150px) {
+        @media screen and (max-width: 375px) {
+            background: rgba(0, 0, 0, 0.65);
             width: 100%;
         }
-      
     `;
 
     export const BannerH1 = styled.h1`
@@ -62,10 +67,9 @@ export const Container = styled.div`
             color: var(--blue);
 
             span {
-                font-size: 2rem;
-                
+                font-size: 2rem;             
             }
-`;
+        `;
     
     export const BannerP = styled.p`
             font-size: 1rem;
@@ -74,5 +78,6 @@ export const Container = styled.div`
             line-height: 24px;
             text-align: right;
             color: var(--white);
-    `;
+
+        `;
  

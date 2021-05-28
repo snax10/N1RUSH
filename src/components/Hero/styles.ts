@@ -1,33 +1,35 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    max-width: 1120px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    
+    gap: 1.2rem;
     margin-top: -6rem;
 
-    @media (max-width: 720px){
-        margin-top: 2rem;
-        
+    @media (max-width: 375px){
+        width: 100%;
+        margin-top: 1.7rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+       
       }
-
 
     div {
       position: relative;
-      margin-left: -2.7rem;
-   
 
         img {
-          width: 33rem;
-          height: 22rem;
+          width: 39rem;
+          height: 23rem;
+
+          @media (max-width: 375px) {
+            width: 334px;
+            height: 190px;
+            margin: 1rem;
+            
+          }
+
         }
         
         p {

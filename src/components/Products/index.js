@@ -2,11 +2,10 @@ import outriders from '../../assets/product-outriders.svg'
 import cyberpunk from '../../assets/product-cyberpunk2077.svg'
 import donkey from '../../assets/product-donkey-kong-country-tropical-freeze.svg'
 
-
-import Modal from 'react-modal';
 import { Container } from "./styles";
 import { useState } from 'react';
 import { NewBuyModal } from '../NewBuyModal';
+import Modal from 'react-modal';
 
 Modal.setAppElement('#root'); //Acessibilidade
 
@@ -39,6 +38,7 @@ export function Products() {
                         </button>
                     </footer>
                 </div>
+
                 <div>
                     <img src={cyberpunk} />
                     <footer>
@@ -52,6 +52,7 @@ export function Products() {
                         </button>
                     </footer>
                 </div>
+                
                 <div>
                     <img src={donkey} />
                     <footer>

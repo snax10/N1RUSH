@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    /* html {
+    html {
         @media (max-width: 1024px) {
             font-size: 93.75%; //16 x 0,9375 = 15px
         }
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
         @media (max-width: 720px) {
             font-size: 87.5%; //16 x 0,875  = 14px  
         }
-    } */
+    }
 
     body, html {
         width: 100%;
@@ -54,6 +54,8 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
+
+
     }
 
     .react-modal-content {
@@ -65,8 +67,12 @@ export const GlobalStyle = createGlobalStyle`
         position: relative;
         border-radius: 5px;
 
-        @media screen and (max-width: 1100) {
-            
+        @media screen and (max-width: 375px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            margin-top: 1rem;
         }
     }
 

@@ -4,11 +4,8 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
     background: transparent;
     height: 0;
-    
     display: flex;
     justify-content: center;
-
-  
 `;
 
 export const Content = styled.div`
@@ -19,17 +16,18 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
-    @media screen and (max-width: 400px) {
-        position: absolute;
-        top: 10px;
-        left: 25px;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-
+   
     img {
+        padding-right: 0.8rem;
         cursor: pointer;
     }
-
 `;
+
     export const NavLinks = styled.ul`
         cursor: pointer;
         display: flex;
@@ -41,7 +39,7 @@ export const Content = styled.div`
             list-style: none;
             display: flex;
             align-items: center;
-            padding: 10px 15px;
+            padding: 10px 20px;
             color: var(--white);
 
             & + li {
@@ -50,11 +48,9 @@ export const Content = styled.div`
         }
     }
 
-        img {
-                margin-right: 0.8rem;
-                width: 2.7rem;
+            img { 
                 height: 1.4rem;
-        }
+            }
 
                 span {
                 font-size: 0.7rem;
@@ -67,13 +63,14 @@ export const Content = styled.div`
                     color: var(--blue);
                 }
 
-                @media screen and (max-width: 600px) {
-                position: absolute;
-                top: 0px;
-                left: 25px;
-    }
+                    @media screen and (max-width: 600px) {
+                    position: absolute;
+                    top: 0px;
+                    left: 25px;
+                }
             }
-`;
+
+        `;
 
 
 
