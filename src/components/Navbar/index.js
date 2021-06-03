@@ -5,16 +5,9 @@ import search from '../../assets/search-solid.svg'
 import bag from '../../assets/shopping-bag-solid.svg'
 
 import { Nav, Content, NavLinks } from './styles'
-import { useState } from 'react'
 import { Sidebar } from '../SideBar'
 
-export function Navbar() {
-    const[count, setCount] = useState(0)
-
-    function countOn() {
-        setCount (count + 1);
-    }
-
+export function Navbar(props) {
     return(
         <Nav>
             <Content>
@@ -38,8 +31,8 @@ export function Navbar() {
                         <span>BUSCAR</span>
                     </li>
                     <li>
-                        <img  onClick={countOn} src={bag} />
-                        <span>{count}</span>
+                        <img src={bag} />
+                        <span className="last-child">{props.count}</span>
                     </li>
                 </NavLinks>
             </Content>

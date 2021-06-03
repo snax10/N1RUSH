@@ -5,6 +5,7 @@ import closeImg from '../../assets/close_btn.svg'
 import { Container } from './styles'
 
 export function NewBuyModal({ isOpen, onRequestClose } ) {
+
     return(
         <Modal 
         isOpen={isOpen} 

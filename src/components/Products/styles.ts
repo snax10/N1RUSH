@@ -67,8 +67,15 @@ export const Container = styled.main`
                 margin-top: 0.5rem;
                 color: var(--dark-blue);
             }
+        }
+    }
+`;
 
-            button {
+    interface RadioBoxProps {
+        isActive: boolean
+    }
+
+        export const RadioBox = styled.button<RadioBoxProps>`
                 padding: 0.7rem 4rem;
                 margin-top: 1rem;
 
@@ -76,19 +83,21 @@ export const Container = styled.main`
                 border-radius: 5px;
                 outline: none;
 
-                background: var(--blue);
-                color: var(--white);
+                background: ${(props) => props.isActive ? 'var(--dark-blue)' : 'var(--blue)'};
 
-                transition: filter 0.2s;
+                color: var(--white);
+                transition: filter 0.2s;          
 
                 &:hover {
                     filter: brightness(0.8);
                 }
-            }
-        }
+            `;
 
-    }
-`;
+     
+        
+
+   
+
 
 
 

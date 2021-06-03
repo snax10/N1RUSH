@@ -57,14 +57,18 @@ export const Content = styled.div`
                 font-weight: 500;
                 line-height: 1rem;
 
-                 transition: color 0.2s;
+                padding: 2px;
 
+                transition: color 0.2s;
+
+                border-radius: 50%;
+               
                  &:hover {
                     color: var(--blue);
                 }
 
-                    @media screen and (max-width: 600px) {
-                    position: absolute;
+                    @media screen and (max-width: 375px) {
+                    position: relative;
                     top: 0px;
                     left: 25px;
                 }
